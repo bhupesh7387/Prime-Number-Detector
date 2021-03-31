@@ -43,7 +43,7 @@ function checkPrime() {
         }
     }
     else if (prime == null) {
-        resultContent.innerHTML = "Please Enter a Number."
+        resultContent.innerHTML = "Enter a valid number."
     }
 
     else if (prime == "decimal") {
@@ -57,7 +57,6 @@ function showResult() {
     result.classList.add("show")
 
     showResultAnimate()
-    console.log(resultContent.textContent.length)
     if (resultContent.textContent.length > 130) {
         resultContent.style.fontSize = "2.5rem"
     }
@@ -119,4 +118,14 @@ numberInp.addEventListener("keydown", (e) => {
     if (e.keyCode == 69 || e.keyCode == 107 || e.keyCode == 109) {
         e.preventDefault()
     }
+})
+
+numberInp.addEventListener("blur", (e) => {
+    if(numberInp.value != ""){
+        numberInp.focus();
+    }
+})
+
+numberInp.addEventListener("input", (e) => {
+    numberInp.value = numberInp.value.replace("e", "")
 })
