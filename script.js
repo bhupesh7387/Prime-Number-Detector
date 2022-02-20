@@ -120,12 +120,6 @@ numberInp.addEventListener("keydown", (e) => {
     }
 })
 
-numberInp.addEventListener("blur", (e) => {
-    if(numberInp.value != ""){
-        numberInp.focus();
-    }
-})
-
 numberInp.addEventListener("input", (e) => {
     numberInp.value = numberInp.value.replace("e", "")
 })
