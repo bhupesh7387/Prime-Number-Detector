@@ -287,4 +287,11 @@ body {
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
+
+.credit {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 2rem;
+}
 /*# sourceMappingURL=style.css.map */
